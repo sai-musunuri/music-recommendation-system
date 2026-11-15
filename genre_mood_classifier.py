@@ -15,7 +15,7 @@ class MusicRecommendationSystem:
     def __init__(self):
         self.df = None
         self.genre_classifier = None
-        self.mood_classifier = None1
+        self.mood_classifier = None
         self.scaler = StandardScaler()
         self.audio_features = ['tempo', 'valence', 'energy', 'danceability', 
                               'acousticness', 'instrumentalness', 'liveness', 'speechiness']
@@ -402,7 +402,7 @@ def main():
     
     # Load data (use actual Spotify dataset)
     print("Loading Spotify dataset...")
-    df = recommender.load_data(file_path='Spotify Song Recommender/dataset.csv')
+    df = recommender.load_data(file_path='data/dataset.csv')
     
     # Train classifiers
     print("\nTraining genre and mood classifiers...")
